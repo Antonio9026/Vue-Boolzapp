@@ -2,12 +2,15 @@
 const app = Vue.createApp({
     data() {
         return {
-         
-            contatti:[
+            newMessage: {
+                message: "",
+                status: "sent"
+            },
+            contatti: [
                 {
                     name: "Michele",
                     avatar: "img/avatar_1.jpg",
-                    click: false,
+
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
@@ -29,7 +32,7 @@ const app = Vue.createApp({
                 {
                     name: "Fabio",
                     avatar: "img/avatar_2.jpg",
-                    click: false,
+
                     messages: [
                         {
                             date: "20/03/2020 16:30:00",
@@ -51,7 +54,7 @@ const app = Vue.createApp({
                 {
                     name: "Samuele",
                     avatar: "img/avatar_3.jpg",
-                    click: false,
+
                     messages: [
                         {
                             date: "28/03/2020 10:10:40",
@@ -73,8 +76,8 @@ const app = Vue.createApp({
                 {
                     name: "Luisa",
                     avatar: "img/avatar_4.jpg",
-                    click: false,
                     messages: [
+
                         {
                             date: "10/01/2020 15:30:55",
                             message: "Lo sai che ha aperto una nuova pizzeria?",
@@ -88,17 +91,22 @@ const app = Vue.createApp({
                     ],
                 },
             ],
-            activeAvatar : 0,
+            activeAvatar: 0,
         };
 
     },
     methods: {
         onAvatarClick(avatarIndex) {
-           
+
             this.activeAvatar = avatarIndex;
             console.log(this.activeAvatar);
         },
+        addMessage(activeAvatar) {
 
+            const cloneMessage = { ...this.newMessage };
+            this.contatti[activeAvatar].messages.push(cloneMessage);
+            console.log(this.contatti[activeAvatar].messages);
+        },
 
     },
 });

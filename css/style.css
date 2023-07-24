@@ -203,6 +203,7 @@ i {
     height: 70vh;
     padding-top: 70px;
     padding: 10%;
+     overflow: auto;;
 }
 .messages{
     width:100%;
@@ -240,6 +241,7 @@ i {
     justify-content: space-between;
     align-items:center;
     padding: 30px;
+   
 }
 .send-message-bar input{
     width: 90%;

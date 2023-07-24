@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- vue link  -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app" class="container">
+        <div class="green"></div>
+
+        <!-- page chat container  -->
+        <div class="chat_container">
+
+            <!-- info chat messages  -->
+            <nav class="left_side">
+
+                <!-- profile  -->
+                <nav class="info_contact">
+                    <!-- image profile container -->
+                    <div class="img_container">
+                        <div class="img-nav-info">
+                            <div class="image-info">
+                                <img class="io" src="img\avatar_io.jpg" alt="">
+                            </div>
+                            <span>Jesus</span>
+                        </div>
+                        <div class="info_icons">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </nav>
+                <!-- message notifies -->
+                <div class="notifiche-container">
+                    <div class="img-notifiche-info">
+                        <div class="bell-container">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="notifiche_title_container">
+                            <p class="nuove_not_title">Ricevi notifiche di nuovi messaggi</p>
+                            <p class="nuove_not_p">Attiva notifiche</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_ricerca_chat">
+                    <div class="ricerca_sub_container">
+                        <div class="ricerca">
+                            <button class="ricerca-but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <input class="input_ricerca" type="text" name="" id="" placeholder="Cerca o inizia nuova chat">
+                    </div>
+                </div>
+
+                <div class="contact_container">
+                    <div class="img-contact-info">
+                        <div class="image-contact">
+                            <img class="io_contact" src="img\avatar_io.jpg" alt="">
+                        </div>
+                        <div class="contact_name_info">
+                            <h3 class="contact_name">Jesus</h3>
+                            <p class="message_contact">asas</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+            <!-- header main  -->
+
+            <div class="messages_container">
+                <div class="header_messages">
+                    <div class="img_container">
+                        <div class="img-nav-info">
+                            <div class="image-info">
+                                <img class="io" src="img\avatar_io.jpg" alt="">
+                            </div>
+                            <span>Jesus</span>
+                        </div>
+                        <div class="info_icons">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+                <main>
+                    <!-- messages chat  -->
+                    <div class="messages_wrapper">
+                        <div class="messages">
+                            <div class="sent-message"></div>
+                        </div>
+                    </div>
+                </main>
+
+                <div class="send-message-bar">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Insert your message">
+                    <i  class="fa-solid fa-microphone"></i>
+                </div>
+
+            </div>
+           
+        </div>
+       
+    </div>
+
+    <!-- script js  -->
+    <script src="vue/script.js"></script>
+</body>
+
+</html>

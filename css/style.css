@@ -210,10 +210,18 @@ i {
     display: flex;
     flex-direction: column;
 }
-.sent-message, .recived-message{
+.sent-message {
     width: 200px;
     min-height: 1px;
     align-self: end;
+   padding: 10px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+.recived-message{
+    width: 200px;
+    min-height: 1px;
+    align-self: start;
    padding: 10px;
    border-radius: 5px;
    margin-bottom: 10px;

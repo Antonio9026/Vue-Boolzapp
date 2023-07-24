@@ -2,6 +2,7 @@
 const app = Vue.createApp({
     data() {
         return {
+         
             contatti:[
                 {
                     name: "Michele",
@@ -83,12 +84,16 @@ const app = Vue.createApp({
                     ],
                 },
             ],
-
+            activeAvatar : 0,
         };
 
     },
     methods: {
-
+        onAvatarClick(avatarIndex) {
+           
+            this.activeAvatar = avatarIndex;
+            console.log(this.activeAvatar);
+        },
 
 
     },

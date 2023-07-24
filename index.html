@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="contact_container">
-                    <div class="img-contact-info"v-for="(contacsItem,i) in contatti">
+                    <div class="img-contact-info"v-for="(contacsItem,i) in contatti" @click="onAvatarClick(i)">
                         <div class="image-contact">
                             <img class="io_contact" v-bind:src="contacsItem.avatar" alt="">
                         </div>
@@ -100,8 +100,9 @@
                 <main>
                     <!-- messages chat  -->
                     <div class="messages_wrapper">
-                        <div class="messages">
-                            <div class="sent-message"></div>
+                        <div class="messages" v-for="(contactItem, i) in contatti[activeAvatar].messages"
+                       >
+                            <div  v-bind:class="{'sent-message': contactItem.status ==='sent', 'recived-message': contactItem.status ==='received'}">{{ contactItem.message }}</div>
                         </div>
                     </div>
                 </main>

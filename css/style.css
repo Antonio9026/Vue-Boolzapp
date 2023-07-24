@@ -157,12 +157,11 @@ i {
 }
 
 .contact_container {
-
     height: 60px;
-    background-color: #eaeaea;
-
 }
-
+.active{
+    background-color: grey;
+}
 .img-contact-info {
     width: 90%;
     height: 100%;

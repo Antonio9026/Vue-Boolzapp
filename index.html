@@ -65,7 +65,8 @@
                 </div>
 
                 <div class="contact_container">
-                    <div class="img-contact-info"v-for="(contacsItem,i) in contatti" @click="onAvatarClick(i)">
+                    <div class="img-contact-info" v-for="(contacsItem,i) in contatti" @click="onAvatarClick(i)"
+                    v-bind:class=" activeAvatar === i ? 'active':''">
                         <div class="image-contact">
                             <img class="io_contact" v-bind:src="contacsItem.avatar" alt="">
                         </div>
@@ -100,9 +101,10 @@
                 <main>
                     <!-- messages chat  -->
                     <div class="messages_wrapper">
-                        <div class="messages" v-for="(contactItem, i) in contatti[activeAvatar].messages"
-                       >
-                            <div  v-bind:class="{'sent-message': contactItem.status ==='sent', 'recived-message': contactItem.status ==='received'}">{{ contactItem.message }}</div>
+                        <div class="messages" v-for="(contactItem, i) in contatti[activeAvatar].messages">
+                            <div
+                                v-bind:class="{'sent-message': contactItem.status ==='sent', 'recived-message': contactItem.status ==='received'}">
+                                {{ contactItem.message }}</div>
                         </div>
                     </div>
                 </main>
@@ -110,13 +112,13 @@
                 <div class="send-message-bar">
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" placeholder="Insert your message">
-                    <i  class="fa-solid fa-microphone"></i>
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
 
             </div>
-           
+
         </div>
-       
+
     </div>
 
     <!-- script js  -->

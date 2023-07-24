@@ -65,12 +65,12 @@
                 </div>
 
                 <div class="contact_container">
-                    <div class="img-contact-info">
+                    <div class="img-contact-info"v-for="(contacsItem,i) in contatti">
                         <div class="image-contact">
-                            <img class="io_contact" src="img\avatar_io.jpg" alt="">
+                            <img class="io_contact" v-bind:src="contacsItem.avatar" alt="">
                         </div>
                         <div class="contact_name_info">
-                            <h3 class="contact_name">Jesus</h3>
+                            <h3 class="contact_name">{{ contacsItem.name }}</h3>
                             <p class="message_contact">asas</p>
                         </div>
 

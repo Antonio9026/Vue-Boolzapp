@@ -6,6 +6,10 @@ const app = Vue.createApp({
                 message: "",
                 status: "sent"
             },
+            newAutoMessage: {
+                message: "ok",
+                status: "received"
+            },
             contatti: [
                 {
                     name: "Michele",
@@ -106,7 +110,14 @@ const app = Vue.createApp({
             this.contatti[activeAvatar].messages.push(cloneMessage);
             console.log(this.contatti[activeAvatar].messages);
 
-       
+            if (this.newMessage.message !== "") {
+                setTimeout(() => {
+                    const cloneAutoMessage = { ...this.newAutoMessage };
+                    this.contatti[activeAvatar].messages.push(cloneAutoMessage);
+                    console.log(this.contatti[activeAvatar].messages);
+                }, 1000);
+          
+            }
         },
 
     },

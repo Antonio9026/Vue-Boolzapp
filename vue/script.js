@@ -17,16 +17,19 @@ const app = Vue.createApp({
 
                     messages: [
                         {
+                           
                             date: "10/01/2020 15:30:55",
                             message: "Hai portato a spasso il cane?",
                             status: "sent",
                         },
                         {
+                            
                             date: "10/01/2020 15:50:00",
                             message: "Ricordati di dargli da mangiare",
                             status: "sent",
                         },
                         {
+                            
                             date: "10/01/2020 16:15:22",
                             message: "Tutto fatto!",
                             status: "received",
@@ -51,7 +54,7 @@ const app = Vue.createApp({
                         {
                             date: "20/03/2020 16:35:00",
                             message: "Mi piacerebbe ma devo andare a fare la spesa.",
-                            status: "received",
+                            status: "sent",
                         },
                     ],
                 },
@@ -101,12 +104,12 @@ const app = Vue.createApp({
 
                         {
                             date: "10/01/2020 15:30:55",
-                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            message: "Ci vediamo stasera.",
                             status: "sent",
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "Si, ma preferirei andare al cinema",
+                            message: "Perfetto",
                             status: "received",
                         },
                     ],
@@ -118,13 +121,18 @@ const app = Vue.createApp({
 
                         {
                             date: "10/01/2020 15:30:55",
-                            message: "Lo sai che ha aperto una nuova pizzeria?",
-                            status: "sent",
+                            message: "Ti va di uscire Stasera?",
+                            status: "received",
+                        },
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Magari per un aperitivo?",
+                            status: "received",
                         },
                         {
                             date: "10/01/2020 15:50:00",
                             message: "Si, ma preferirei andare al cinema",
-                            status: "received",
+                            status: "sent",
                         },
                     ],
                 },
@@ -140,7 +148,7 @@ const app = Vue.createApp({
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "Si, ma preferirei andare al cinema",
+                            message: "No, non ero al corrente",
                             status: "received",
                         },
                     ],
@@ -152,12 +160,12 @@ const app = Vue.createApp({
 
                         {
                             date: "10/01/2020 15:30:55",
-                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            message: "Hai fatto la spesa?",
                             status: "sent",
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "Si, ma preferirei andare al cinema",
+                            message: "Si.",
                             status: "received",
                         },
                     ],
@@ -190,9 +198,10 @@ const app = Vue.createApp({
         },
 
         searchAvatar(){
-            return this.contatti.filter((contatti,i) => contatti.name.toLowerCase().includes(this.searchInput.toLowerCase()));
-        }
-
+            return this.contatti.filter((contatti) => contatti.name.toLowerCase().includes(this.searchInput.toLowerCase()));
+        },
+        
+       
     },
 });
 console.log(app);

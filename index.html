@@ -34,7 +34,7 @@
                             <div class="image-info">
                                 <img class="io" src="img\avatar_io.jpg" alt="">
                             </div>
-                            <span>Jesus</span>
+                            <h4 class="io-name">Jesus</h4>
                         </div>
                         <div class="info_icons">
                             <i class="fa-solid fa-circle-notch"></i>
@@ -61,19 +61,19 @@
                             <button class="ricerca-but"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                         <input class="input_ricerca" type="text" name="" id="" placeholder="Cerca o inizia nuova chat"
-                        v-model="searchInput">
+                            v-model="searchInput">
                     </div>
                 </div>
-              
+
                 <div class="contact_container">
-                    <div class="img-contact-info" v-for="(contacsItem,i) in  searchAvatar(i)" @click="onAvatarClick(i)"
-                    v-bind:class=" activeAvatar === i ? 'active':''">
+                    <div class="img-contact-info" v-for="(contacsItem,i) in  searchAvatar()" @click="onAvatarClick(i)"
+                        v-bind:class=" activeAvatar === i ? 'active':''">
                         <div class="image-contact">
                             <img class="io_contact" v-bind:src="contacsItem.avatar" alt="">
                         </div>
                         <div class="contact_name_info">
-                            <h3 class="contact_name">{{ contacsItem.name }}</h3>
-                            <p class="message_contact">asas</p>
+                            <h4 class="contact_name">{{ contacsItem.name }}</h4>
+                            <small class="message_contact">Ultimo messaggio inviato</small>
                         </div>
 
                     </div>
@@ -88,9 +88,13 @@
                     <div class="img_container">
                         <div class="img-nav-info">
                             <div class="image-info">
-                                <img class="io"  v-bind:src="contatti[activeAvatar].avatar"  alt="">
+                                <img class="io" v-bind:src="contatti[activeAvatar].avatar" alt="">
                             </div>
-                            <span>{{contatti[activeAvatar].name}}</span>
+                            <div class="conatct_date">
+                                
+                                <h4>{{contatti[activeAvatar].name}}</h4>
+                                <small>Ultimo messaggio oggi alle </small>
+                            </div>
                         </div>
                         <div class="info_icons">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -103,18 +107,19 @@
                     <!-- messages chat  -->
                     <div class="messages_wrapper">
                         <div class="messages" v-for="(contactItem, i) in contatti[activeAvatar].messages">
-                            <div
+                            <div class="message"
                                 v-bind:class="{'sent-message': contactItem.status ==='sent', 'recived-message': contactItem.status ==='received'}">
-                                {{ contactItem.message }}</div>
+                                {{ contactItem.message}} <div class="ceck"><i class="fa-solid fa-check"></i></div>
+                            </div>
                         </div>
+
                     </div>
                 </main>
 
                 <div class="send-message-bar">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Insert your message"
-                    v-model="newMessage.message"
-                    @keyup.enter="addMessage(activeAvatar)">
+                    <input type="text" placeholder="Insert your message" v-model="newMessage.message"
+                        @keyup.enter="addMessage(activeAvatar)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
 

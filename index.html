@@ -60,12 +60,13 @@
                         <div class="ricerca">
                             <button class="ricerca-but"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
-                        <input class="input_ricerca" type="text" name="" id="" placeholder="Cerca o inizia nuova chat">
+                        <input class="input_ricerca" type="text" name="" id="" placeholder="Cerca o inizia nuova chat"
+                        v-model="searchInput">
                     </div>
                 </div>
-
+              
                 <div class="contact_container">
-                    <div class="img-contact-info" v-for="(contacsItem,i) in contatti" @click="onAvatarClick(i)"
+                    <div class="img-contact-info" v-for="(contacsItem,i) in  searchAvatar(i)" @click="onAvatarClick(i)"
                     v-bind:class=" activeAvatar === i ? 'active':''">
                         <div class="image-contact">
                             <img class="io_contact" v-bind:src="contacsItem.avatar" alt="">

@@ -79,7 +79,75 @@ const app = Vue.createApp({
                 },
                 {
                     name: "Luisa",
+                    avatar: "img/avatar_io.jpg",
+                    messages: [
+
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Martina",
+                    avatar: "img/avatar_6.jpg",
+                    messages: [
+
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Stefano",
                     avatar: "img/avatar_4.jpg",
+                    messages: [
+
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Giovanni",
+                    avatar: "img/avatar_8.jpg",
+                    messages: [
+
+                        {
+                            date: "10/01/2020 15:30:55",
+                            message: "Lo sai che ha aperto una nuova pizzeria?",
+                            status: "sent",
+                        },
+                        {
+                            date: "10/01/2020 15:50:00",
+                            message: "Si, ma preferirei andare al cinema",
+                            status: "received",
+                        },
+                    ],
+                },
+                {
+                    name: "Andrea",
+                    avatar: "img/avatar_7.jpg",
                     messages: [
 
                         {
@@ -96,6 +164,7 @@ const app = Vue.createApp({
                 },
             ],
             activeAvatar: 0,
+            searchInput: "",
         };
 
     },
@@ -119,6 +188,10 @@ const app = Vue.createApp({
           
             }
         },
+
+        searchAvatar(){
+            return this.contatti.filter((contatti,i) => contatti.name.toLowerCase().includes(this.searchInput.toLowerCase()));
+        }
 
     },
 });

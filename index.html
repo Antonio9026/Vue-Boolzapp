@@ -87,9 +87,9 @@
                     <div class="img_container">
                         <div class="img-nav-info">
                             <div class="image-info">
-                                <img class="io" src="img\avatar_io.jpg" alt="">
+                                <img class="io"  v-bind:src="contatti[activeAvatar].avatar"  alt="">
                             </div>
-                            <span>Jesus</span>
+                            <span>{{contatti[activeAvatar].name}}</span>
                         </div>
                         <div class="info_icons">
                             <i class="fa-solid fa-magnifying-glass"></i>

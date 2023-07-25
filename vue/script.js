@@ -102,10 +102,11 @@ const app = Vue.createApp({
             console.log(this.activeAvatar);
         },
         addMessage(activeAvatar) {
-
             const cloneMessage = { ...this.newMessage };
             this.contatti[activeAvatar].messages.push(cloneMessage);
             console.log(this.contatti[activeAvatar].messages);
+
+       
         },
 
     },

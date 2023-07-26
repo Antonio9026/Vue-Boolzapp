@@ -3,10 +3,13 @@ const app = Vue.createApp({
     data() {
         return {
             newMessage: {
+                date: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 message: "",
                 status: "sent"
+                
             },
             newAutoMessage: {
+                date: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 message: "ok",
                 status: "received"
             },
@@ -182,26 +185,40 @@ const app = Vue.createApp({
             this.activeAvatar = avatarIndex;
             console.log(this.activeAvatar);
         },
+
         addMessage(activeAvatar) {
+            
             const cloneMessage = { ...this.newMessage };
+
             this.contatti[activeAvatar].messages.push(cloneMessage);
+
             console.log(this.contatti[activeAvatar].messages);
+
+            this.newMessage.date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+        
 
             if (this.newMessage.message !== "") {
                 setTimeout(() => {
                     const cloneAutoMessage = { ...this.newAutoMessage };
+
                     this.contatti[activeAvatar].messages.push(cloneAutoMessage);
+
                     console.log(this.contatti[activeAvatar].messages);
+
+                    this.newAutoMessage.date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                    
                 }, 1000);
           
-            }
+            };
+             this.newMessage.message = ""
         },
 
         searchAvatar(){
             return this.contatti.filter((contatti) => contatti.name.toLowerCase().includes(this.searchInput.toLowerCase()));
         },
-        
        
+     
     },
 });
 console.log(app);

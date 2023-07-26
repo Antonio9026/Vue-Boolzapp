@@ -221,7 +221,16 @@ i {
     width:100%;
     display: flex;
     flex-direction: column;
+
+   
 }
+
+.date{
+    align-self: end;
+ 
+    font-size: 8px;
+}
+
 .sent-message {
     width: 200px;
     min-height: 1px;

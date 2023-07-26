@@ -91,7 +91,7 @@
                                 <img class="io" v-bind:src="contatti[activeAvatar].avatar" alt="">
                             </div>
                             <div class="conatct_date">
-                                
+
                                 <h4>{{contatti[activeAvatar].name}}</h4>
                                 <small>Ultimo messaggio oggi alle </small>
                             </div>
@@ -109,7 +109,10 @@
                         <div class="messages" v-for="(contactItem, i) in contatti[activeAvatar].messages">
                             <div class="message"
                                 v-bind:class="{'sent-message': contactItem.status ==='sent', 'recived-message': contactItem.status ==='received'}">
-                                {{ contactItem.message}} <div class="ceck"><i class="fa-solid fa-check"></i></div>
+                                {{ contactItem.message}}
+                              
+                              
+                                <div class="date">{{ contactItem.date}}</div>
                             </div>
                         </div>
 

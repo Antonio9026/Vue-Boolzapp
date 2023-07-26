@@ -193,9 +193,10 @@ const app = Vue.createApp({
             this.contatti[activeAvatar].messages.push(cloneMessage);
 
             console.log(this.contatti[activeAvatar].messages);
+            
 
             this.newMessage.date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-
+     
         
 
             if (this.newMessage.message !== "") {
@@ -207,7 +208,7 @@ const app = Vue.createApp({
                     console.log(this.contatti[activeAvatar].messages);
 
                     this.newAutoMessage.date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                    
+                    // console.log(this.newAutoMessage.date);
                 }, 1000);
           
             };
@@ -215,10 +216,11 @@ const app = Vue.createApp({
         },
 
         searchAvatar(){
+
             return this.contatti.filter((contatti) => contatti.name.toLowerCase().includes(this.searchInput.toLowerCase()));
         },
        
-     
+    
     },
 });
 console.log(app);
